@@ -1,0 +1,32 @@
+table {
+  width: 50%;
+  min-width: 700px;
+}
+
+th {
+  min-width: 100px;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+td {
+  padding: 0 1rem;
+}
+
+tbody tr:nth-child(even) {
+  background: hsl(0, 0%, 97%);
+}
+
+.table-header{
+  background-color:#dde0e2;
+  height:28px;
+}
+
+
+table {
+  width: 200px;
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}

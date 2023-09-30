@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+  <thead>
+    <tr class="table-header">
+      <th>Sr No</th>
+      <th *ngFor="let item of columnDef">{{item.Head}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of rowData;let sr= index">
+      <td>{{sr+1}}</td>
+      <td *ngFor="let column of columnDef">
+        <div *ngIf="column.FieldName!=''">
+          {{item[column.FieldName]}}
+        </div>
+        <div *ngIf="column.FieldName ==''" class="text-center">
+          <button class="btn btn-sm btn-success" (click)="edit(item)">Edit</button>
+          <!-- <button class="btn btn-sm btn-danger ml-2" (click)="deleteRecord(item)">Delete</button> -->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
